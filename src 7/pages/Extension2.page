@@ -1,0 +1,18 @@
+<apex:page standardController="Account" extensions="grid_all_editable_ext">
+    <apex:form id="formId">
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!acctList}" var="st">
+                <apex:column headerValue="Name">
+                    <apex:inputField value="{!st.Name}"></apex:inputField>
+                </apex:column>
+                <apex:column headerValue="Phone">
+                    <apex:inputField value="{!st.Phone}"></apex:inputField>
+                </apex:column>
+            </apex:pageBlockTable>
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save Records" action="{!Save}"/>
+            </apex:pageBlockButtons> 
+        </apex:pageBlock>
+        
+    </apex:form>
+</apex:page>

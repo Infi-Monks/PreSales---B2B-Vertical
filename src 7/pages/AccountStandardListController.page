@@ -1,0 +1,26 @@
+<apex:page standardController="Account" recordSetVar="accounts">  
+     <apex:form id="frm">  
+         <apex:pageBlock id="pb">  
+             <apex:pageBlockTable value="{!Accounts}" var="acc">  
+                 <apex:column headerValue="Account Name">  
+                     <apex:outputField value="{!acc.name}"/>  
+         </apex:column>  
+         <apex:column headerValue="Account Number">  
+                     <apex:outputField value="{!acc.Id}"/>  
+         </apex:column>  
+         <apex:column headerValue="Industry">  
+                     <apex:outputField value="{!acc.Industry}"/>  
+         </apex:column>  
+         <apex:column headerValue="Account Owner">  
+                     <apex:outputField value="{!acc.Owner.Name}"/>      
+         </apex:column>  
+             </apex:pageBlockTable>  
+             <apex:pageBlockButtons location="bottom">  
+                 <apex:commandButton value="First" action="{!first}"/>  
+                 <apex:commandButton value="previous" action="{!previous}"/>  
+                 <apex:commandButton value="Next" action="{!next}"/>  
+                 <apex:commandButton value="Last" action="{!last}"/>                  
+             </apex:pageBlockButtons>  
+         </apex:pageBlock>  
+     </apex:form>  
+ </apex:page>

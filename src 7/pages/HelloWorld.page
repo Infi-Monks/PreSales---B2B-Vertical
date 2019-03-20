@@ -1,0 +1,29 @@
+<apex:page >
+  <apex:form >
+      <apex:pageBlock title="Contact Form" >
+          <apex:pageBlockSection columns="3" >
+              <apex:pageBlockSectionitem >
+                  <apex:outputText >Name</apex:outputText>
+                  <apex:inputText />
+              </apex:pageBlockSectionitem>
+              <apex:pageBlockSectionitem >
+                  <apex:outputText >Phone Number</apex:outputText>
+                  <apex:inputText />
+                  
+              </apex:pageBlockSectionitem>
+              
+              <apex:pageBlockSectionitem >
+                  <apex:outputText >Address</apex:outputText>
+                  <apex:inputTextarea />
+              </apex:pageBlockSectionitem>
+              
+          </apex:pageBlockSection>
+          <apex:pageBlockButtons >
+              <apex:commandButton value="Save"/>
+              <apex:commandLink value="Link"/>
+          </apex:pageBlockButtons>
+          
+      </apex:pageBlock>
+      
+  </apex:form>
+</apex:page>
