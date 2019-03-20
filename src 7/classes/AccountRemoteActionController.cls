@@ -10,7 +10,7 @@ global class AccountRemoteActionController
     @RemoteAction
     global static Account getAccount(String accountName) 
     {
-        account = [select id, name, phone, type, numberofemployees from Account where name = :accountName ];
+        account = [select id, name, type, numberofemployees from Account where name = :accountName ];
         return account;
     }
 }
